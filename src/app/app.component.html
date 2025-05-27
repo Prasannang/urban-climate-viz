@@ -1,0 +1,33 @@
+<div class="dashboard">
+  <div class="sidebar left">
+    <h2>Interactive Urban Climate Dashboard</h2>
+    <p style="font-style: italic; font-size: 0.9em; margin-top: -10px; margin-bottom: 15px;">
+      Developed by Naga Prasanna Gurramkonda
+    </p>
+    <div class="metrics">
+      <h3>Climate Metrics Panel</h3>
+      <p><strong>Air Quality Index:</strong> 42</p>
+      <p><strong>Temperature:</strong> 68°F</p>
+      <p><strong>Humidity:</strong> 72%</p>
+      <p><strong>Pollution Index:</strong> 25</p>
+    </div>
+  </div>
+
+  <div id="map" class="map-container"></div>
+
+  <div class="sidebar right">
+    <h3>Data Layers Panel</h3>
+    <label>
+      <input type="checkbox" [checked]="isAirQualityVisible" (change)="toggleAirQuality($event)" />
+      Air Quality
+    </label><br>
+    <label>
+      <input type="checkbox" [checked]="isWeatherVisible" (change)="toggleWeather($event)" />
+      Weather
+    </label><br>
+    <label>
+      <input type="checkbox" [checked]="isInfrastructureVisible" (change)="toggleInfrastructure($event)" />
+      City Infrastructure
+    </label>
+  </div>
+</div>
